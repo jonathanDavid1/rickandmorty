@@ -4,7 +4,7 @@ import Pagination from './Pagination';
 
 const INITIAL_PAGE =1
 
-const ResidentList = ( {residents}) => {
+const ResidentList = ( {residents, currentLocation}) => {
   const [currentPage, setCurrentPage] = useState(INITIAL_PAGE);
 //cantidad de residentes por pagina
   const RESIDENTS_PER_PAGE = 20;
@@ -34,7 +34,7 @@ const ResidentList = ( {residents}) => {
     <section>
       <section>
         {
-          residents.map((resident) => <ResidentCard key={resident} residentUrl={resident} />)
+          residentsInPage.map((resident) => <ResidentCard key={resident} residentUrl={resident} />)
         }
       </section>
 

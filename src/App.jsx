@@ -13,7 +13,7 @@ function App() {
   const handleSubmit = (e)=> {
     e.preventDefault();
     const newLocation = e.target.newLocation.value;
-    fetchDimension(newLocation)
+    fetchDimension(newLocation) 
 
   }
   const fetchDimension = (idLocation) => {  
@@ -35,7 +35,7 @@ function App() {
     <main className='bg-black min-h-screen text-white'>
     <LocationForm handleSubmit={handleSubmit} />
     <LocationInfo currentLocation={currentLocation} />
-    <ResidentList residents={currentLocation?.residents ?? []} />
+    <ResidentList residents={currentLocation?.residents ?? []} currentLocation={currentLocation} />
     </main>
   )
 }
