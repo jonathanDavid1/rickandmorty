@@ -6,8 +6,8 @@ const LocationInfo = ( {currentLocation}) => {
           <h2>{currentLocation?.name}</h2>
           <ul>
               <li>Type: {currentLocation?.type}</li>
-              <li>Dimention: {currentLocation?.dimention}</li>
-              <li>Population: {currentLocation?.residents}</li>
+              <li>Dimention: {currentLocation?.dimension}</li>
+              <li>Population: {currentLocation?.residents.length}</li>
           </ul>
 
       </section>
