@@ -32,11 +32,25 @@ function App() {
   }, []);
 
   return (
-    <main className='bg-black min-h-screen text-white'>
-    <LocationForm handleSubmit={handleSubmit} />
-    <LocationInfo currentLocation={currentLocation} />
-    <ResidentList residents={currentLocation?.residents ?? []} currentLocation={currentLocation} />
-    </main>
+    <section className='bg-black text-white grid'>
+
+      <header className='bg[url("/public/images/background-header.png")]'>
+        <div className='bg-cover bg-center h-[300px] flex justify-center items-center'>
+          <img className='absolute w-[240px] animate-spin-slow' src="/public/images/sol-completo.png" alt="" />
+          <img className='relative w-[450px] h-[300px]' src="/public/images/sombra.png" alt="" />
+          <img className='absolute w-[300px]' src="/public/images/logo.png" alt="" />
+
+        </div>
+        <div>
+          <LocationForm handleSubmit={handleSubmit} />
+        </div>
+    </header>
+      <main>
+        <LocationInfo currentLocation={currentLocation} />
+        <ResidentList residents={currentLocation?.residents ?? []} currentLocation={currentLocation} />
+      </main>
+
+    </section>
   )
 }
 
