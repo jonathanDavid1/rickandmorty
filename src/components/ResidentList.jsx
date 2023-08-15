@@ -32,7 +32,7 @@ const ResidentList = ( {residents, currentLocation}) => {
 
   return (
     <section>
-      <section>
+      <section  className='grid columns-auto m-auto'>
         {
           residentsInPage.map((resident) => <ResidentCard key={resident} residentUrl={resident} />)
         }

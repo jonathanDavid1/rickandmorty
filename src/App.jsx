@@ -34,11 +34,11 @@ function App() {
   return (
     <section className='bg-black text-white grid'>
 
-      <header className='bg[url("/public/images/background-header.png")]'>
+      <header className='bg[url("./images/background-header.png")]'>
         <div className='bg-cover bg-center h-[300px] flex justify-center items-center'>
-          <img className='absolute w-[240px] animate-spin-slow' src="/public/images/sol-completo.png" alt="" />
-          <img className='relative w-[450px] h-[300px]' src="/public/images/sombra.png" alt="" />
-          <img className='absolute w-[300px]' src="/public/images/logo.png" alt="" />
+          <img className='absolute w-[240px] animate-spin-slow' src="./images/sol-completo.png" alt="" />
+          <img className='relative w-[450px] h-[300px]' src="./images/sombra.png" alt="" />
+          <img className='absolute w-[300px]' src="./images/logo.png" alt="" />
 
         </div>
         <div>

@@ -9,7 +9,8 @@ const LocationForm = ( {handleSubmit} ) => {
         id='newLocation'
         max={126}
         placeholder='Type a location id ...'
-        type='number' />
+        type='number'
+        required />
       <button className='span-1 bg-green-700 border-2 border-x-1 border-green-600 border-x-1 w-auto p-2'>Search</button>
     </form>
 
