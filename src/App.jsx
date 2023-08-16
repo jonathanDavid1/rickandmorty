@@ -45,7 +45,7 @@ function App() {
           <LocationForm handleSubmit={handleSubmit} />
         </div>
     </header>
-      <main>
+      <main className='bg-[url("./images/bg-main.png")]'>
         <LocationInfo currentLocation={currentLocation} />
         <ResidentList residents={currentLocation?.residents ?? []} currentLocation={currentLocation} />
       </main>

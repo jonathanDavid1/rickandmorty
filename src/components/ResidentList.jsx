@@ -31,14 +31,16 @@ const ResidentList = ( {residents, currentLocation}) => {
 
 
   return (
-    <section>
-      <section  className='grid columns-auto m-auto'>
+    <section className='grid grid-rows-[auto-auto] place-items-center gap-20 max-w-[1024px] w-full'>
+      <section className="grid gap-8 grid-cols-[repeat(auto-fit,_260px)] place-items-center w-full justify-center">
         {
-          residentsInPage.map((resident) => <ResidentCard key={resident} residentUrl={resident} />)
+          residentsInPage.map((resident) => <div className='w-[260px] h-80 grid grid-rows-[auto,auto] place items center select-none'><ResidentCard key={resident} residentUrl={resident} /></div> )
         }
       </section>
 
+      <section>
       <Pagination pages={pages} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
+      </section>
 
 
     </section>
