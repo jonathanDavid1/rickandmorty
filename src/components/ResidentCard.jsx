@@ -21,7 +21,7 @@ const ResidentCard = ( {residentUrl}) => {
       <header>
         <img src={residentInfo?.image} alt="" />
         <div className='flex items-center gap-2 p-2'>
-          <div className={`h-[10px] aspect-square rounded-full ${residentStatus[residentInfo?.status]} `}></div>
+          <div className={`h-[10px] bg-green-500 aspect-square rounded-full ${residentStatus[residentInfo?.status]} `}></div>
           {residentInfo?.status}
         </div>
       </header>
