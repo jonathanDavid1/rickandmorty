@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <section className='bg-black text-white grid'>
+    <section className='bg-black text-white grid h-screen'>
 
       <header className='bg[url("./images/background-header.png")]'>
         <div className='bg-cover bg-center h-[300px] flex justify-center items-center'>
@@ -44,8 +44,8 @@ function App() {
         <div>
           <LocationForm handleSubmit={handleSubmit} />
         </div>
-    </header>
-      <main className='bg-[url("./images/bg-main.png")] bg-cover min-h-fit'>
+      </header>
+      <main className='bg-[url("./images/bg-main.png")] bg-cover '>
         <LocationInfo currentLocation={currentLocation} />
         <ResidentList residents={currentLocation?.residents ?? []} currentLocation={currentLocation} />
       </main>
