@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <section className='bg-black text-white grid h-screen'>
+    <section className='bg-black text-white flex flex-col'>
 
       <header className='bg[url("./images/background-header.png")]'>
         <div className='bg-cover bg-center h-[300px] flex justify-center items-center'>
