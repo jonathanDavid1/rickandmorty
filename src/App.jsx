@@ -6,15 +6,16 @@ import axios from 'axios';
 import LocationInfo from './components/LocationInfo';
 import LocationForm from './components/LocationForm';
 import ResidentList from './components/ResidentList';
+import Loader from './components/Loader';
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState(null);
+  const [isloading,setIsloading] = useState(true);
 
   const handleSubmit = (e)=> {
     e.preventDefault();
     const newLocation = e.target.newLocation.value;
     fetchDimension(newLocation) 
-
   }
   const fetchDimension = (idLocation) => {  
     const url = `https://rickandmortyapi.com/api/location/${idLocation}`
@@ -24,16 +25,22 @@ function App() {
       .then(({data}) => setCurrentLocation(data))
       .catch((err) => console.log(err));
 
-  }
+  };
 
   useEffect(() => {
     const randomDimension = getRandomDimension(126)
     fetchDimension(randomDimension)
   }, []);
 
-  return (
-    <section className='bg-black text-white flex flex-col'>
+  useEffect(() => {
+  setTimeout(() => {
+    setIsloading(false);
+    }, 1500);
+  }, []);
 
+  return (
+     <section className='bg-black text-white flex flex-col'>
+      {isloading && <Loader/>}
       <header className='bg[url("./images/background-header.png")]'>
         <div className='bg-cover bg-center h-[300px] flex justify-center items-center'>
           <img className='absolute w-[240px] animate-spin-slow' src="./images/sol-completo.png" alt="" />
